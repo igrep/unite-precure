@@ -4,13 +4,13 @@ let s:unite_source = {
       \ "name": "precure",
       \ }
 
-let s:precures = []
-
 function! s:unite_source.gather_candidates(args, context)
-  " set precure data to s:precures by this script.
+let l:precures = []
+
+  " set precure data to l:precures by this script.
   execute 'rubyfile' s:script_dir . '/collect_precures.rb'
 
-  return s:precures
+  return l:precures
 endfunction
 
 function! unite#sources#precure#define()
