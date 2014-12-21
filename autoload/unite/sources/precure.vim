@@ -7,9 +7,7 @@ let s:unite_source = {
 let s:precures = []
 
 function! s:unite_source.gather_candidates(args, context)
-endfunction
-
-function! g:CollectPrecures()
+  " set precure data to s:precures by this script.
   execute 'rubyfile' s:script_dir . '/collect_precures.rb'
 
   return s:precures
