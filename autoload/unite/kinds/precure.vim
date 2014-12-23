@@ -11,23 +11,23 @@ let s:unite_kind = {
       \ }
 
 function! s:unite_kind.action_table.name.func(candidate)
-  echomsg a:candidate.source__name
+  call append(line('.'),  a:candidate.source__name)
 endfunction
 
 function! s:unite_kind.action_table.human_name.func(candidate)
-  echomsg a:candidate.source__human_name
+  call append(line('.'),  a:candidate.source__human_name)
 endfunction
 
 function! s:unite_kind.action_table.precure_name.func(candidate)
-  echomsg a:candidate.source__precure_name
+  call append(line('.'),  a:candidate.source__precure_name)
 endfunction
 
 function! s:unite_kind.action_table.attack.func(candidate)
-  echomsg a:candidate.source__attack
+  call append(line('.'),  a:candidate.source__attack)
 endfunction
 
 function! s:unite_kind.action_table.transform.func(candidate)
-  echomsg a:candidate.source__transform
+  call append(line('.'),  a:candidate.source__transform)
 endfunction
 
 function! unite#kinds#precure#define()
