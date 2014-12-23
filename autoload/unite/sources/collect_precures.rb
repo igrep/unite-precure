@@ -1,6 +1,6 @@
 require 'rubicure'
 
-candidates = Rubicure::Girl.names.map do|name|
+candidates = Rubicure::Girl.uniq_names.map do|name|
   r = '{'
   r << %Q'"word": "#{name}",'
   r << '"kind": "common",'
