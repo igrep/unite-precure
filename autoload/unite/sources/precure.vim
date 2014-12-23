@@ -2,6 +2,7 @@ let s:script_dir = expand('<sfile>:p:h')
 
 let s:unite_source = {
       \ "name": "precure",
+      \ "description": 'Look up Japanese battle heroine "Pretty Cure (Precure)". Powered by Rubicure.',
       \ }
 
 function! s:unite_source.gather_candidates(args, context)
