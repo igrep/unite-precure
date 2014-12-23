@@ -1,7 +1,10 @@
 require 'rubicure'
 
 candidates = Rubicure::Girl.names.map do|name|
-  %Q'{ "word": "#{name}", "kind": "common" }'
+  r = '{'
+  r << %Q'"word": "#{name}",'
+  r << '"kind": "common",'
+  r << '}'.freeze
 end
 
 command_to_set_precures = <<EOS
